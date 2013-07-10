@@ -19,6 +19,9 @@
 		B58E3E7E178CE1E100BD45CC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58E3E7C178CE1E100BD45CC /* MainStoryboard.storyboard */; };
 		B58E3E81178CE1E100BD45CC /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58E3E80178CE1E100BD45CC /* AttendanceViewController.m */; };
 		B58E3E88178CE60F00BD45CC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58E3E87178CE60F00BD45CC /* CoreLocation.framework */; };
+		B58E3EAC178CE95200BD45CC /* AttendanceLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58E3EAB178CE95200BD45CC /* AttendanceLoginViewController.m */; };
+		B58E3EB0178CF2B500BD45CC /* AttendanceLoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58E3EAF178CF2B500BD45CC /* AttendanceLoginStoryboard.storyboard */; };
+		B58E3EB4178CFE8900BD45CC /* AttendanceOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58E3EB3178CFE8900BD45CC /* AttendanceOAuthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,11 @@
 		B58E3E7F178CE1E100BD45CC /* AttendanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttendanceViewController.h; sourceTree = "<group>"; };
 		B58E3E80178CE1E100BD45CC /* AttendanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttendanceViewController.m; sourceTree = "<group>"; };
 		B58E3E87178CE60F00BD45CC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B58E3EAA178CE95200BD45CC /* AttendanceLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceLoginViewController.h; sourceTree = "<group>"; };
+		B58E3EAB178CE95200BD45CC /* AttendanceLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceLoginViewController.m; sourceTree = "<group>"; };
+		B58E3EAF178CF2B500BD45CC /* AttendanceLoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AttendanceLoginStoryboard.storyboard; sourceTree = "<group>"; };
+		B58E3EB2178CFE8900BD45CC /* AttendanceOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceOAuthViewController.h; sourceTree = "<group>"; };
+		B58E3EB3178CFE8900BD45CC /* AttendanceOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceOAuthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 				B58E3E7C178CE1E100BD45CC /* MainStoryboard.storyboard */,
 				B58E3E7F178CE1E100BD45CC /* AttendanceViewController.h */,
 				B58E3E80178CE1E100BD45CC /* AttendanceViewController.m */,
+				B58E3EB1178CF2BA00BD45CC /* Login */,
 				B58E3E6B178CE1E100BD45CC /* Supporting Files */,
 			);
 			path = "mobile-attendance";
@@ -109,6 +118,18 @@
 				B58E3E7A178CE1E100BD45CC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B58E3EB1178CF2BA00BD45CC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B58E3EAF178CF2B500BD45CC /* AttendanceLoginStoryboard.storyboard */,
+				B58E3EAA178CE95200BD45CC /* AttendanceLoginViewController.h */,
+				B58E3EAB178CE95200BD45CC /* AttendanceLoginViewController.m */,
+				B58E3EB2178CFE8900BD45CC /* AttendanceOAuthViewController.h */,
+				B58E3EB3178CFE8900BD45CC /* AttendanceOAuthViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +189,7 @@
 				B58E3E79178CE1E100BD45CC /* Default@2x.png in Resources */,
 				B58E3E7B178CE1E100BD45CC /* Default-568h@2x.png in Resources */,
 				B58E3E7E178CE1E100BD45CC /* MainStoryboard.storyboard in Resources */,
+				B58E3EB0178CF2B500BD45CC /* AttendanceLoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +203,8 @@
 				B58E3E71178CE1E100BD45CC /* main.m in Sources */,
 				B58E3E75178CE1E100BD45CC /* AttendanceAppDelegate.m in Sources */,
 				B58E3E81178CE1E100BD45CC /* AttendanceViewController.m in Sources */,
+				B58E3EAC178CE95200BD45CC /* AttendanceLoginViewController.m in Sources */,
+				B58E3EB4178CFE8900BD45CC /* AttendanceOAuthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

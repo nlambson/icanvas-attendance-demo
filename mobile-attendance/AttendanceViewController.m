@@ -46,6 +46,13 @@ static NSString *GeofenceCellIdentifier = @"GeofenceCell";
     
     // Setup View
     [self setupView];
+    
+    // You could just do a simple check here to see if we have the users access_token
+    UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"AttendanceLoginStoryboard" bundle:nil];
+    UIViewController *initialLoginVC = [loginStoryboard instantiateInitialViewController];
+    initialLoginVC.modalPresentationStyle = UIModalPresentationPageSheet;
+    
+    [self presentViewController:initialLoginVC animated:YES completion:nil];
 }
 
 - (void)viewDidUnload {

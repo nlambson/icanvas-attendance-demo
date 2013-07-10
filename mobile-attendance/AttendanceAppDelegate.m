@@ -7,12 +7,44 @@
 //
 
 #import "AttendanceAppDelegate.h"
+#import "AttendanceViewController.h"
 
 @implementation AttendanceAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    ////// USE THIS CODE IF YOU HAVE REMOVE THE MainStoryboard from the Project Summary Settings //////
+    ////// THIS CODE LOADS ALL STORYBOARDS AND VIEWCONTROLLERS MANUALLY //////
+    /*
     // Override point for customization after application launch.
+    UIViewController *controller = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    // You can set up lots of things here
+    // Styling
+    // Tracking services
+    // configuration and api
+    // Verify that we have the access_token, otherwise load up another viewcontroller for the user
+    // This Code can be extracted into its own method like "requestAccessTokenIfNecessary" similar to iCanvas
+    UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"AttendanceLoginStoryboard" bundle:nil];
+    UIViewController *initialLoginVC = [loginStoryboard instantiateInitialViewController];
+    initialLoginVC.modalPresentationStyle = UIModalPresentationPageSheet;
+    
+    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    
+    //This method "reloadUserInterface" loads up all the iphone/ipad views itself
+    //[self reloadUserInterface]; //I've just put what reloadUserInterface and setupIphoneViews do inline
+    [self.window.rootViewController dismissViewControllerAnimated:NO completion:NULL];
+    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateInitialViewController];
+    AttendanceViewController *dash = nav.viewControllers[0];
+    self.window.rootViewController = nav;
+    
+    [controller presentViewController:initialLoginVC animated:YES completion:nil];
+    
+    //you may want a local variable keeping track of the viewcontroller you presented to login, see iCanvasAppDelegate
+    //It appears that canvaskit has some fancy networking calls which can wait until you are logged in before executing.
+    */
     return YES;
 }
 							

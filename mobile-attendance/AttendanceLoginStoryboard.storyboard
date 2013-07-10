@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BbS-bZ-eu3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Attendance Login View Controller-->
+        <scene sceneID="xpU-LY-CpE">
+            <objects>
+                <viewController id="q6l-Jc-DaA" customClass="AttendanceLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FpD-i5-Lxs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-dl-lR3">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Onward!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ag5-Eo-xxP" kind="push" id="e2J-ee-rzU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXl-Ca-TWn">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login to Canvas">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeWindow:" destination="q6l-Jc-DaA" eventType="touchUpInside" id="5fm-0i-iRJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.82014420224197226" blue="0.65639463869937398" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IPH-dl-lR3" firstAttribute="centerX" secondItem="FpD-i5-Lxs" secondAttribute="centerX" type="default" id="F3Q-6F-s5e"/>
+                            <constraint firstItem="IPH-dl-lR3" firstAttribute="top" secondItem="FpD-i5-Lxs" secondAttribute="top" constant="86" id="dqq-ag-J01"/>
+                            <constraint firstItem="IPH-dl-lR3" firstAttribute="centerX" secondItem="RXl-Ca-TWn" secondAttribute="centerX" type="default" id="gmp-7Y-DM8"/>
+                            <constraint firstAttribute="bottom" secondItem="RXl-Ca-TWn" secondAttribute="bottom" constant="82" id="vBK-w7-Ng2"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Xa6-6S-Pr1"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="login" destination="RXl-Ca-TWn" id="Kwn-57-pS4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmk-Ms-Hfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="252"/>
+        </scene>
+        <!--AttendanceO Auth View Controller-->
+        <scene sceneID="8hT-WN-8aU">
+            <objects>
+                <viewController id="ag5-Eo-xxP" customClass="AttendanceOAuthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wWP-AY-7Xs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYt-KW-xQF">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="363" id="Qnl-vW-aaC"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81712303564974453" green="0.88468417534565025" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wYt-KW-xQF" firstAttribute="trailing" secondItem="wWP-AY-7Xs" secondAttribute="trailing" type="default" id="IS8-70-hxq"/>
+                            <constraint firstItem="wYt-KW-xQF" firstAttribute="leading" secondItem="wWP-AY-7Xs" secondAttribute="leading" type="default" id="Xcn-Nv-FJI"/>
+                            <constraint firstItem="wYt-KW-xQF" firstAttribute="bottom" secondItem="wWP-AY-7Xs" secondAttribute="bottom" type="default" id="xGg-gp-QKv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6la-cT-riG"/>
+                    <connections>
+                        <outlet property="webView" destination="wYt-KW-xQF" id="9HL-h0-9cj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcJ-hv-f6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t2b-OT-AQM">
+            <objects>
+                <navigationController id="BbS-bZ-eu3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G7K-fe-eOo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q6l-Jc-DaA" kind="relationship" relationship="rootViewController" id="sMr-p6-7iP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3t-c0-q2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="252"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AttendanceLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendanceLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeWindow:"/>
+                <relationship kind="outlet" name="login" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="AttendanceOAuthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendanceOAuthViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
